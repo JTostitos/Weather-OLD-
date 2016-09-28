@@ -21,14 +21,12 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-J5-QPR">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tuesday, December 26, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-b9-AGD">
-                                        <frame key="frameInset" minX="60" width="223" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday, December 26, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-b9-AGD">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.97332098441045833" green="1" blue="0.99200656775825335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Palm Coast, Florida" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N57-ZO-v5l">
-                                        <frame key="frameInset" minX="98" minY="20" width="148" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palm Coast, Florida" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N57-ZO-v5l">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.96280446909999995" green="1" blue="0.95922158079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -68,11 +66,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6nd-24-k3U">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeeklyForcast" rowHeight="69" id="cFg-hg-Ox0">
-                                        <rect key="frame" x="0.0" y="28" width="365" height="69"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WeatherCell" rowHeight="69" id="cFg-hg-Ox0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cFg-hg-Ox0" id="mmZ-iN-R2f">
-                                            <frame key="frameInset" width="365" height="69"/>
+                                            <frame key="frameInset" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fpz-O8-boC">
@@ -162,15 +160,25 @@
                                                         <constraint firstAttribute="width" constant="100" id="YCK-tZ-fw9"/>
                                                     </constraints>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sha-xC-2QN" userLabel="seperator">
+                                                    <color key="backgroundColor" red="0.63385623346560849" green="0.63385623346560849" blue="0.63385623346560849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="kXb-0R-DlQ"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="TeF-UD-dpB" secondAttribute="trailing" constant="10" id="5KL-0R-5oz"/>
+                                                <constraint firstAttribute="bottom" secondItem="sha-xC-2QN" secondAttribute="bottom" id="EEf-4B-X5P"/>
                                                 <constraint firstAttribute="bottom" secondItem="2Zb-ht-QxW" secondAttribute="bottom" constant="3" id="KDa-aw-esp"/>
+                                                <constraint firstAttribute="trailing" secondItem="sha-xC-2QN" secondAttribute="trailing" id="Q02-XE-gTw"/>
                                                 <constraint firstAttribute="trailing" secondItem="2Zb-ht-QxW" secondAttribute="trailing" constant="10" id="ixU-2b-Eqt"/>
+                                                <constraint firstItem="sha-xC-2QN" firstAttribute="leading" secondItem="mmZ-iN-R2f" secondAttribute="leading" id="jlb-c5-bSk"/>
                                                 <constraint firstItem="TeF-UD-dpB" firstAttribute="top" secondItem="mmZ-iN-R2f" secondAttribute="top" constant="3" id="sGt-zr-cga"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -178,14 +186,14 @@
                         <color key="backgroundColor" red="0.1969439871" green="0.61843426140000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="yIG-Cf-26X" secondAttribute="trailing" id="5NL-DI-6rX"/>
-                            <constraint firstItem="6nd-24-k3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="5zv-BA-V4w"/>
+                            <constraint firstItem="6nd-24-k3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5zv-BA-V4w"/>
                             <constraint firstItem="y8c-J5-QPR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UIa-X8-zgW"/>
                             <constraint firstItem="y8c-J5-QPR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UoZ-Or-QBO"/>
-                            <constraint firstAttribute="trailing" secondItem="6nd-24-k3U" secondAttribute="trailing" constant="5" id="XRl-yj-anD"/>
+                            <constraint firstAttribute="trailing" secondItem="6nd-24-k3U" secondAttribute="trailing" id="XRl-yj-anD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y8c-J5-QPR" secondAttribute="trailing" id="Yp5-eE-oDj"/>
                             <constraint firstItem="yIG-Cf-26X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZwX-ST-1uw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6nd-24-k3U" secondAttribute="bottom" constant="5" id="hFC-Tr-sWa"/>
-                            <constraint firstItem="6nd-24-k3U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="230" id="kTy-Y9-t5c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6nd-24-k3U" secondAttribute="bottom" id="hFC-Tr-sWa"/>
+                            <constraint firstItem="6nd-24-k3U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="253" id="kTy-Y9-t5c"/>
                             <constraint firstItem="yIG-Cf-26X" firstAttribute="top" secondItem="y8c-J5-QPR" secondAttribute="bottom" constant="10" id="veI-Ze-s3D"/>
                         </constraints>
                     </view>

@@ -13,6 +13,8 @@
 		A35C843F1D9886E8000549E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35C843D1D9886E8000549E3 /* Main.storyboard */; };
 		A35C84411D9886E8000549E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35C84401D9886E8000549E3 /* Assets.xcassets */; };
 		A35C84441D9886E8000549E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35C84421D9886E8000549E3 /* LaunchScreen.storyboard */; };
+		A3711F8E1D9C5E1C00BC7D69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */; };
+		A3711F901D9C607600BC7D69 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		A35C84401D9886E8000549E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35C84431D9886E8000549E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A35C84451D9886E8000549E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		E9AAF44309057711F65D518F /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,14 +82,48 @@
 		A35C84381D9886E8000549E3 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				A3711F8C1D9C5D8800BC7D69 /* Constants */,
+				A3711F8B1D9C5D7F00BC7D69 /* Controller */,
+				A3711F8A1D9C5D7B00BC7D69 /* View */,
+				A3711F891D9C5D7400BC7D69 /* Model */,
 				A35C84391D9886E8000549E3 /* AppDelegate.swift */,
-				A35C843B1D9886E8000549E3 /* ViewController.swift */,
 				A35C843D1D9886E8000549E3 /* Main.storyboard */,
 				A35C84401D9886E8000549E3 /* Assets.xcassets */,
 				A35C84421D9886E8000549E3 /* LaunchScreen.storyboard */,
 				A35C84451D9886E8000549E3 /* Info.plist */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		A3711F891D9C5D7400BC7D69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A3711F8A1D9C5D7B00BC7D69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A3711F8B1D9C5D7F00BC7D69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A35C843B1D9886E8000549E3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A3711F8C1D9C5D8800BC7D69 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +251,8 @@
 			files = (
 				A35C843C1D9886E8000549E3 /* ViewController.swift in Sources */,
 				A35C843A1D9886E8000549E3 /* AppDelegate.swift in Sources */,
+				A3711F901D9C607600BC7D69 /* CurrentWeather.swift in Sources */,
+				A3711F8E1D9C5E1C00BC7D69 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -359,7 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
