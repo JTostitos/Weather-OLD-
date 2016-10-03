@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var currentWeatherTypelabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var currentWeather = CurrentWeather()
+    var currentWeather: CurrentWeather!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        currentWeather.downloadWeatherDetails {
-            //Setup the UI to loas downloaded data
-            
-        }
+        currentWeather = CurrentWeather()
         
+        currentWeather.downloadWeatherDetails {
+            self.updateMainUI()
+
+        }
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,6 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath)
         
         return cell
+    }
+    
+    func updateMainUI() {
+        dateLabel.text = currentWeather.date
+        currentTempLabel.text =  "\(currentWeather.currentTemp)"
+        currentWeatherTypelabel.text = currentWeather.weatherType
+        locationLabel.text = currentWeather._cityName
+        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
     }
 }
 

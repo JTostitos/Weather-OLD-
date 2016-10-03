@@ -24,16 +24,17 @@ class CurrentWeather {
     
     var date: String {
         if _date == nil {
-            _date = ""
+            _date = "Cannot retrieve the current date"
         }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
         let currentDate = dateFormatter.string(from: Date())
-        self._date = "(currentDate)"
+        self._date = currentDate
         
         return _date
+        
     }
     
     var weatherType: String {
@@ -50,16 +51,20 @@ class CurrentWeather {
         return _currentTemp
     }
     
-    func downloadWeatherDetails(completed: DownloadComplete) {
+    func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         //Alamofire download
-        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
-        Alamofire.request(currentWeatherURL).responseJSON {response in
+        
+        //let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
+        
+        Alamofire.request(CURRENT_WEATHER_URL).responseJSON {response in
             let result = response.result
+            print(result.value)
             
             if let dict = result.value as? Dictionary<String, AnyObject> {
                 
                 if let name = dict["name"] as? String {
                     self._cityName = name.capitalized
+                    
                     print(self._cityName)
                 }
                 
@@ -83,13 +88,11 @@ class CurrentWeather {
                         
                         self._currentTemp = kelvinToFarenheit
                         print(self._currentTemp)
-
                     }
                 }
                 
             }
-            
+            completed()
         }
-        completed()
     }
 }

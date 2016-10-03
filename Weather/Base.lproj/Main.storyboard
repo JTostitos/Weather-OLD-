@@ -19,23 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-J5-QPR">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday, December 26, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-b9-AGD">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.97332098441045833" green="1" blue="0.99200656775825335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palm Coast, Florida" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N57-ZO-v5l">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.96280446909999995" green="1" blue="0.95922158079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ykJ-rF-wy1"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday, December 26, 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbX-b9-AGD">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.97332098441045833" green="1" blue="0.99200656775825335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIG-Cf-26X">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f9h-3k-jgQ">
@@ -182,19 +170,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palm Coast, Florida" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="N57-ZO-v5l">
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="0.96280446909999995" green="1" blue="0.95922158079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1969439871" green="0.61843426140000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pbX-b9-AGD" secondAttribute="trailing" id="4Xl-Er-Uyz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yIG-Cf-26X" secondAttribute="trailing" id="5NL-DI-6rX"/>
                             <constraint firstItem="6nd-24-k3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5zv-BA-V4w"/>
-                            <constraint firstItem="y8c-J5-QPR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UIa-X8-zgW"/>
-                            <constraint firstItem="y8c-J5-QPR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UoZ-Or-QBO"/>
+                            <constraint firstItem="pbX-b9-AGD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dbs-GA-Ws8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N57-ZO-v5l" secondAttribute="trailing" id="DfP-V6-Eke"/>
+                            <constraint firstItem="N57-ZO-v5l" firstAttribute="top" secondItem="pbX-b9-AGD" secondAttribute="bottom" constant="1" id="GAj-Yw-31e"/>
+                            <constraint firstItem="N57-ZO-v5l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mr5-J4-ftY"/>
                             <constraint firstAttribute="trailing" secondItem="6nd-24-k3U" secondAttribute="trailing" id="XRl-yj-anD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="y8c-J5-QPR" secondAttribute="trailing" id="Yp5-eE-oDj"/>
+                            <constraint firstItem="yIG-Cf-26X" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Xdi-Rb-Yg0"/>
                             <constraint firstItem="yIG-Cf-26X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZwX-ST-1uw"/>
+                            <constraint firstItem="pbX-b9-AGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ap3-Ye-jJB"/>
+                            <constraint firstItem="yIG-Cf-26X" firstAttribute="top" secondItem="N57-ZO-v5l" secondAttribute="bottom" constant="10" id="bfT-VK-NL7"/>
+                            <constraint firstItem="yIG-Cf-26X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="geW-ON-typ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6nd-24-k3U" secondAttribute="bottom" id="hFC-Tr-sWa"/>
                             <constraint firstItem="6nd-24-k3U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="253" id="kTy-Y9-t5c"/>
-                            <constraint firstItem="yIG-Cf-26X" firstAttribute="top" secondItem="y8c-J5-QPR" secondAttribute="bottom" constant="10" id="veI-Ze-s3D"/>
                         </constraints>
                     </view>
                     <connections>

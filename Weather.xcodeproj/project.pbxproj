@@ -13,6 +13,7 @@
 		A35C843F1D9886E8000549E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35C843D1D9886E8000549E3 /* Main.storyboard */; };
 		A35C84411D9886E8000549E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35C84401D9886E8000549E3 /* Assets.xcassets */; };
 		A35C84441D9886E8000549E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35C84421D9886E8000549E3 /* LaunchScreen.storyboard */; };
+		A36731C71DA2AA7300E98994 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36731C61DA2AA7300E98994 /* MapKit.framework */; };
 		A3711F8E1D9C5E1C00BC7D69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */; };
 		A3711F901D9C607600BC7D69 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		A35C84401D9886E8000549E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35C84431D9886E8000549E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A35C84451D9886E8000549E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A36731C61DA2AA7300E98994 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		E9AAF44309057711F65D518F /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36731C71DA2AA7300E98994 /* MapKit.framework in Frameworks */,
 				4BC4307171C69CB7CD921193 /* Pods_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +59,7 @@
 		7B50C58341E3276E431B7A35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A36731C61DA2AA7300E98994 /* MapKit.framework */,
 				E9AAF44309057711F65D518F /* Pods_Weather.framework */,
 			);
 			name = Frameworks;
@@ -161,7 +165,13 @@
 				TargetAttributes = {
 					A35C84351D9886E8000549E3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KMTZDB3J22;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -379,6 +389,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMTZDB3J22;
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.Weather;
@@ -394,6 +405,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMTZDB3J22;
 				INFOPLIST_FILE = Weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.Weather;
