@@ -16,6 +16,7 @@
 		A36731C71DA2AA7300E98994 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36731C61DA2AA7300E98994 /* MapKit.framework */; };
 		A3711F8E1D9C5E1C00BC7D69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */; };
 		A3711F901D9C607600BC7D69 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */; };
+		A388BCA91DA41CE000367172 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A388BCA81DA41CE000367172 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A36731C61DA2AA7300E98994 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A3711F8D1D9C5E1C00BC7D69 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		A388BCA81DA41CE000367172 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		E9AAF44309057711F65D518F /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				A3711F8F1D9C607600BC7D69 /* CurrentWeather.swift */,
+				A388BCA81DA41CE000367172 /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				A35C843A1D9886E8000549E3 /* AppDelegate.swift in Sources */,
 				A3711F901D9C607600BC7D69 /* CurrentWeather.swift in Sources */,
 				A3711F8E1D9C5E1C00BC7D69 /* Constants.swift in Sources */,
+				A388BCA91DA41CE000367172 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
