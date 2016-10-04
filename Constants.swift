@@ -15,8 +15,8 @@ let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
 let CITY = "q="
 let COUNTRY = ","
 //Future Forecast
-let MODE = "&mode=JSON&units=metric"
-let DAYS_TO_DISPLAY = "&cnt=6"
+let MODE = "&mode=JSON&units=kelvin"
+let DAYS_TO_DISPLAY = "&cnt=8"
 
 let APP_ID = "&appid="
 let API_KEY = "0001911cebe16b8728c037499b068e0d"
